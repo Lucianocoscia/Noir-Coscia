@@ -1,11 +1,14 @@
 /* Comienzan css  */
 
 *{
-  font-family: 'PT Sans Narrow', sans-serif ;
-  color: #fff;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+header{
+  font-family: 'PT Sans Narrow', sans-serif ;
+  color: #fff;
+  position: relative;
 }
 .navbar{
   height: 20vh;
@@ -25,6 +28,7 @@
   justify-content: space-between;
 }
 .navbar_ul a{
+  color: #fff;
   text-align: center;
   text-decoration: none;
   padding: 1rem;
@@ -37,4 +41,15 @@
 .navbar_ul li{
   list-style-type: none;
   font-size: 1rem;
+}
+.button_Cart{
+  position: absolute;
+  background-color: black;
+  cursor: pointer;
+  right: 0;
+  transform: translateX(-100px);
+  transition: .4s;
+}
+.button_Cart:hover{
+  opacity: 0.5;
 }

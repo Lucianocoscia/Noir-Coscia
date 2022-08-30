@@ -1,4 +1,5 @@
 import logo from   '../images/logo12.png'
+import CartWidget from './CartWidget/CartWidget.js';
 
 const NavBar = () => {
     return (
@@ -11,13 +12,12 @@ const NavBar = () => {
                     <li><a href="#">Productos</a></li>
                     <li><a href="#">Quienes Somos</a></li>
                     <li><a href="#">Contacto</a></li>
-                    <li><a href="#" ></a></li>
-                </ul>
-            </nav>
 
+                </ul>
+                <button className='button_Cart'><CartWidget/></button>
+            </nav>
         </header>
-    )
-}
+    )}
 
 export default NavBar;
 
