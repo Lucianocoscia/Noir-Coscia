@@ -1,11 +1,11 @@
 // icono y ubicarlo en navbar
 import React from 'react'
-import carrito from './shopping-cart.svg'
+import {AiOutlineShoppingCart} from 'react-icons/ai'
 
 
 const CartWidget = () => {
     return (
-    <img src={carrito} ></img>
+    <a className='carrito'> <AiOutlineShoppingCart/></a>
     )
 }
 
