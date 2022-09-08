@@ -1,13 +1,43 @@
-import React from 'react';
 import './ItemList.css';
-import ItemCount from '../ItemCount/ItemCount';
+import { useEffect, useState } from 'react';
+import data from '../MockData/MockData';
+import ItemList from '../ItemList/ItemList';
+import portada from '../../images/portada.jpg'
+import portada1 from '../../images/ropa4-byn.jpg'
+import portada2 from '../../images/ropa3.jpg'
 
-const ItemListContainer = ({greeting}) => {
-    const stock = 10;
+
+const ItemListContainer = () => {
+    const [productList, setProductList] = useState([]);
+
+    useEffect(() => {
+        getProducts
+        .then ((response) =>{
+            setProductList(response);
+        })
+        .catch((error) => console.log((error)));
+    }, [])
+
+    const getProducts = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(data);
+        }, 2000);
+    })
+
     return (
         <div>
-        {/* <h1 className='mensaje'>{greeting}</h1> */}
-        <ItemCount stock={stock}/>
+            <div className='container'>
+                <div className='grid_portada'>
+                    <img className='img_portada' src={portada1} alt=''/>
+                    <img className='img_portada'  src={portada2} alt=''/>
+                    <img className='img_portada'  src={portada} alt=''/>
+                </div>
+            </div>
+
+            
+            <div className='container'>
+                <ItemList lista={productList} />   
+            </div>
         </div>
 
     )

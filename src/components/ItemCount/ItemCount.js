@@ -13,19 +13,14 @@ const ItemCount = ({stock}) => {
     const resta = () => items > 0 ? setItems(items - 1) : alert('No se pueden meter valores negativos')
 
   return (
-    <div className='contenedor' >
-        <div className='card'>
-          <h5 className='card_titulo '> Remera Oversize</h5>
-          <p className='card_titulo '> Stock = {stock}</p>
+<>
+  <div className='div__button'>
+              <button className='button1' onClick={resta}> <GrFormSubtract/></button>
+              <span className='card_numero_contador' >{items}</span>
+              <button className='button1' onClick={suma}><GrFormAdd/></button>
+  </div>
+</>
 
-          <div className='div__button'>
-            <button className='button' onClick={resta}> <GrFormSubtract/></button>
-            <p className='card_numero_contador' >{items}</p>
-            <button className='button' onClick={suma}><GrFormAdd/></button>
-          </div>
-
-        </div>
-    </div>
   )
 }
 

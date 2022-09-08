@@ -6,3 +6,27 @@
     justify-content: center; */
     /* align-items: center; */
 }
+.contenedor_card{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+}
+.grid_productos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    column-gap: 0.5rem;
+    row-gap: 3rem;
+}
+.grid_portada{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3,1fr);
+    /* column-gap: 0.2rem; */
+    margin-bottom: 4rem;
+}
+.img_portada{
+    height: 100%;
+    width: 100%;
+}
