@@ -1,17 +1,3 @@
-.mensaje{
-    color: black;
-    min-height: 150px;
-    text-align: center;
-    /* display: flex;
-    justify-content: center; */
-    /* align-items: center; */
-}
-.contenedor_card{
-    display: flex;
-    /* flex-wrap: wrap; */
-    justify-content: center;
-    align-items: center;
-}
 .grid_productos{
     display: grid;
     grid-template-columns: repeat(4, 1fr);

@@ -1,0 +1,76 @@
+.grid_categorias{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 350px;
+    column-gap: 1rem;
+    margin-bottom: 4rem;
+}
+.grid_sales{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 500px;
+    column-gap: 1rem;
+    margin-bottom: 4rem;
+
+}
+
+.grid_categorias-hijo{
+    background-image:url(../../images/dunk.jpg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid_categorias-hijo1{
+    background-image:url(../../images/dunk.jpg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid_categorias-hijo2{
+    background-image:url(../../images/dunk.jpg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid_categorias-hijo3{
+    background-image:url(../../images/dunk.jpg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.grid_categorias-hijo4{
+    background-image:url(../../images/dunk.jpg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.texto_img{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+}
+.button_img{
+    padding: 9px 12px;
+    text-transform: uppercase;
+    background-color:#ff5400 ;
+    border: none;
+    margin-top: 1rem;
+}

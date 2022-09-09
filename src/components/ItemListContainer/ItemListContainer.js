@@ -5,7 +5,7 @@ import ItemList from '../ItemList/ItemList';
 import portada from '../../images/portada.jpg'
 import portada1 from '../../images/ropa4-byn.jpg'
 import portada2 from '../../images/ropa3.jpg'
-
+import Categories from '../Categories/Categories';
 
 const ItemListContainer = () => {
     const [productList, setProductList] = useState([]);
@@ -33,7 +33,7 @@ const ItemListContainer = () => {
                     <img className='img_portada'  src={portada} alt=''/>
                 </div>
             </div>
-
+            <Categories/>
             
             <div className='container'>
                 <ItemList lista={productList} />   
