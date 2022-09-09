@@ -4,13 +4,13 @@
     grid-template-rows: repeat(2,1fr);
     column-gap: 0.5rem;
     row-gap: 3rem;
+    margin-bottom: 4rem;
 }
 .grid_portada{
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(3,1fr);
-    /* column-gap: 0.2rem; */
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 .img_portada{
     height: 100%;

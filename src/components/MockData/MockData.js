@@ -1,11 +1,11 @@
-import product1 from '../../images/dunk.jpg'
-import product2 from '../../images/ropa1.jpg'
-import product3 from '../../images/ropa2.jpg'
-import product4 from '../../images/ropa3.jpg'
-import product5 from '../../images/ropa4-byn.jpg'
-import product6 from '../../images/ropa5.jpg'
-import product7 from '../../images/foto-ropa1.jpg'
-import product8 from '../../images/remera.jpg'
+import product1 from '../../images/buzo.jpg'
+import product2 from '../../images/pantalon-creme.jpg'
+import product3 from '../../images/producto1.jpg'
+import product4 from '../../images/pant-black.jpg'
+import product5 from '../../images/creme.jpg'
+import product6 from '../../images/producto.jpg'
+import product7 from '../../images/producto3.jpg'
+import product8 from '../../images/jacket.jpg'
 
 const data = [
 
