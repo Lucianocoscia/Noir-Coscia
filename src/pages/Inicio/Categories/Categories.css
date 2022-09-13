@@ -23,20 +23,20 @@
     align-items: center;
 }
 .grid_categorias_hijo-1{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)),url(../../images/puffer3.png) ;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)),url(../../../images/puffer3.png) ;
 
 }
 .grid_categorias_hijo-2{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)),url(../../images/pant3.jpg) ;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)),url(../../../images/pant3.jpg) ;
 }
 .grid_categorias_hijo-3{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url(../../images/remera1.jpg) ;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url(../../../images/remera1.jpg) ;
 }
 .grid_categorias_hijo-4{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20)), url(../../images/tienda-ropa.jpg) ;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20)), url(../../../images/tienda-ropa.jpg) ;
 }
 .grid_categorias_hijo-5{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20)), url(../../images/portada2.jpg) ;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20)), url(../../../images/portada2.jpg) ;
     
 }
 .texto_img{

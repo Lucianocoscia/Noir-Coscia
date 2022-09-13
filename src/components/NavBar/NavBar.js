@@ -3,6 +3,7 @@ import CartWidget from '../CartWidget/CartWidget'
 import logo from '../../images/Noir..png'
 import {AiOutlineSearch} from 'react-icons/ai'
 import Oferta from './Oferta'
+import { NavLink } from 'react-router-dom'
 
 const NavBar = () => {
     return (
@@ -20,17 +21,30 @@ const NavBar = () => {
                     </div>
 
                     <div className='navbar_items'>
-                        <a className='link'>Crear Cuenta</a>
-                        <a className='link'>Iniciar Sesión</a>
+                        <NavLink to={'/registro'} className='link'>Crear Cuenta</NavLink>
+                        <NavLink to={'/login'} className='link'>Iniciar Sesión</NavLink>
                         <button className='button_Cart'><CartWidget/></button>
                     </div>
 
                 </nav>
                 <div className='contenedor_links' >
                         <ul className="navbar_ul">
-                            <li><a className='ul_enlace' href="#">Inicio</a></li>
-                            <li><a className='ul_enlace' href="#">Productos</a></li>
-                            <li><a className='ul_enlace' href="#">Contacto</a></li>
+                            <li>
+                                <NavLink className={'ul_enlace'} to={'/'} >
+                                    Inicio
+
+                                </NavLink></li>
+                            <li>
+                                <NavLink className={'ul_enlace'} to={'/products'}>
+                                    Productos
+
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink className={'ul_enlace'} to={'/contact'}>
+                                    Contacto
+                                </NavLink>
+                            </li>
                         </ul>
                     </div>
             </header>

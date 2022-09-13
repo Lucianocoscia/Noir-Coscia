@@ -107,8 +107,8 @@ ul{
     transition: 1s;
 }
 .ul_enlace:hover{
-    color: orange;
-    border-top: 1px solid orange;
+    color: #2D3D42;
+    border-top: 1px solid #2D3D42;
 }
 .oferta{
     height: 4vh;

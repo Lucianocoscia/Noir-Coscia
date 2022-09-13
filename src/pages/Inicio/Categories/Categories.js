@@ -1,10 +1,21 @@
-import React from 'react'
-import './Categories.css'
-import foto from '../../images/dunk.jpg'
+import React from 'react';
+import './Categories.css';
+import portada from '../../../images/portada.jpg';
+import portada1 from '../../../images/ropa4-byn.jpg';
+import portada2 from '../../../images/ropa3.jpg';
+
 
 const Categories = () => {
   return (
     <>
+
+    <div className='container'>
+                    <div className='grid_portada'>
+                        <img className='img_portada' src={portada1} alt=''/>
+                        <img className='img_portada'  src={portada2} alt=''/>
+                        <img className='img_portada'  src={portada} alt=''/>
+                    </div>
+    </div>
     <div className='container'>
         <div className='grid_categorias'>
             <div className='grid_categorias_hijo  grid_categorias_hijo-1'>

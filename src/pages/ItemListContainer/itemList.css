@@ -16,3 +16,10 @@
     height: 100%;
     width: 100%;
 }
+.decoration1{
+    text-decoration: none;
+    color: black;
+}
+.decoration1:hover{
+    color: black;
+}

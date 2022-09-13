@@ -1,0 +1,26 @@
+.boton-login{
+    border-radius: 10px;
+    border: none;
+    background-color: #2D3D42;
+    padding: 8px 16px;
+    width: 100%;
+    font-size: 20px;
+    color: #fff;
+    margin-top: 2rem;
+}
+.contenedor-login{
+    height: 65vh;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.titulo-login{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 30px;
+}
+.flex-login{
+    display: flex;
+    justify-content: space-evenly;
+}
