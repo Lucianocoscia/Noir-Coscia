@@ -43,6 +43,12 @@ header{
     text-align: center;
     font-size: 60px;
     font-weight: 500;
+    color: #000;
+    text-decoration: none;
+}
+.navbar_h1:hover{
+    color: #000;
+    opacity: 0.8;
 }
 .navbar_items{
     display:flex ;
@@ -110,6 +116,11 @@ ul{
     color: #2D3D42;
     border-top: 1px solid #2D3D42;
 }
+.overline-nav{
+    border-top: 1 px solid #2D3D42 ;
+    color: #2D3D42;
+    color: red;
+}
 .oferta{
     height: 4vh;
     background-color: #000;
@@ -120,4 +131,13 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.dropdown-item.active, .dropdown-item:active {
+    color: #000;
+    text-decoration: none;
+    background-color: #fff;
+}
+.dropdown-item:hover {
+    color: var(--bs-dropdown-link-hover-color);
+    background-color: var(--bs-dropdown-link-hover-bg);
 }

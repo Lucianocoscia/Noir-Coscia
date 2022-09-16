@@ -1,6 +1,6 @@
 import React from 'react'
 import './Item.css'
-import ItemCount from '../ItemCount/ItemCount'
+// import ItemCount from '../ItemCount/ItemCount'
 
 const Item = ({ title, price , image}) => {
   // const stock = 10;

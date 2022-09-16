@@ -1,6 +1,5 @@
 import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget'
-import logo from '../../images/Noir..png'
 import {AiOutlineSearch} from 'react-icons/ai'
 import Oferta from './Oferta'
 import { NavLink } from 'react-router-dom'
@@ -13,11 +12,13 @@ const NavBar = () => {
                 <nav className="navbar1">
                     <div className='navbar_buscador'>
                         <input className='buscador_input' placeholder='Buscar...'></input>
-                        <a className='buscador_img'><AiOutlineSearch/></a>
+                        <a href='' className='buscador_img'><AiOutlineSearch/></a>
                     </div>
 
                     <div>
-                    <h1 className="navbar_h1" src={logo}  alt="logo">Noir.</h1>
+                    <NavLink className="navbar_h1"  to={'/'}>
+                        Noir.
+                    </NavLink>
                     </div>
 
                     <div className='navbar_items'>
@@ -30,21 +31,35 @@ const NavBar = () => {
                 <div className='contenedor_links' >
                         <ul className="navbar_ul">
                             <li>
-                                <NavLink className={'ul_enlace'} to={'/'} >
+                                <NavLink   to={'/'}  className='ul_enlace'  >
                                     Inicio
 
                                 </NavLink></li>
-                            <li>
+ {/*                            <li>
                                 <NavLink className={'ul_enlace'} to={'/products'}>
-                                    Productos
-
+                                    Productos         
                                 </NavLink>
+                            </li> */}
+                            <li className=" dropdown">
+{/*                                 <a className=" dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Productos
+                                </a> */}
+                                <NavLink className={'ul_enlace dropdown-toggle'} role="button" data-bs-toggle="dropdown"  to={'/products'}>
+                                    Productos         
+                                </NavLink>
+                                <ul className="dropdown-menu">
+                                    <li><NavLink className="dropdown-item" data-bs-auto-close="outside"  to={'/products'} >Ver Todos</NavLink></li>
+                                    <li><NavLink className="dropdown-item" data-bs-auto-close="true" to={'/category/Abrigos'} >Abrigos</NavLink></li>
+                                    <li><NavLink className="dropdown-item" data-bs-auto-close="true" to={'/category/Pantalones'} >Pantalones</NavLink></li>
+                                    <li><NavLink className="dropdown-item" data-bs-auto-close="true" to={'/category/Remeras'} >Remeras</NavLink></li>
+                                </ul>
                             </li>
                             <li>
                                 <NavLink className={'ul_enlace'} to={'/contact'}>
                                     Contacto
                                 </NavLink>
                             </li>
+
                         </ul>
                     </div>
             </header>
