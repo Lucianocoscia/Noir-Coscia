@@ -5,7 +5,7 @@ import {AiOutlineShoppingCart} from 'react-icons/ai'
 
 const CartWidget = () => {
     return (
-    <a href='' className='carrito'> <AiOutlineShoppingCart/></a>
+    <button  className='carrito button_Cart'> <AiOutlineShoppingCart/></button>
     )
 }
 

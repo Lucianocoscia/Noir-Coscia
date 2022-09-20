@@ -12,7 +12,7 @@ const NavBar = () => {
                 <nav className="navbar1">
                     <div className='navbar_buscador'>
                         <input className='buscador_input' placeholder='Buscar...'></input>
-                        <a href='' className='buscador_img'><AiOutlineSearch/></a>
+                        <button  className='buscador_img'><AiOutlineSearch/></button>
                     </div>
 
                     <div>

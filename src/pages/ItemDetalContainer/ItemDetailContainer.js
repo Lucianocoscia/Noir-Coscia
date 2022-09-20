@@ -7,7 +7,7 @@ import "./ItemDetailContainer.css";
 
 const ItemDetailContainer = () => {
     const { id } = useParams();
-    console.log(id);
+    // console.log(id);
 
     const [productDetail, setProductDetail] = useState([]);
 

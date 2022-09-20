@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./Components/Footer/Footer";
 import Login from "./pages/Login/Login";
 import Registro from "./pages/Registro/Registro";
+
 import CartProvider from "./context/CartProvider";
 
 function App() {
@@ -52,10 +53,5 @@ function App() {
 }
 
 export default App;
-{
-  /* <div className="App">
 
 
-<ItemDetailContainer/>
-</div> */
-}

@@ -10,6 +10,12 @@ const ItemListContainer = () => {
 
     const [productList, setProductList] = useState([]);
 
+    const getProducts = new Promise((resolve, reject) => {
+        setTimeout(() => {
+        resolve(data);
+        }, 2000);
+    });
+
     useEffect(() => {
         getProducts
         .then((response) => {
@@ -20,20 +26,11 @@ const ItemListContainer = () => {
             } else {
             setProductList(response);
             }
-            // setProductList(response);
-            // console.log(response);
-            // if (categoryName){
-            //     setProductList(response.find((item) => item.category === categoryName))
-            // }
         })
         .catch((error) => console.log(error));
     }, [categoryName]);
 
-    const getProducts = new Promise((resolve, reject) => {
-        setTimeout(() => {
-        resolve(data);
-        }, 2000);
-    });
+
 
     return (
         <div>

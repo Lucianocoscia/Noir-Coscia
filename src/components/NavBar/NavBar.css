@@ -38,6 +38,8 @@ header{
     color: #000;
     text-align: center;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
 .navbar_h1{
     text-align: center;

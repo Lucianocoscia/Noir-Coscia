@@ -40,9 +40,12 @@
     background-color:#2D3D42 ;
     color: #fff;
     transition: .5s;
+    text-decoration: none;
+    text-align: center;
 }
 .boton-agregar:hover{
     background-color: #2d3d42d8;
+    color: #fff;
 }
 .hr-detalle{
     margin-left: 5%;
