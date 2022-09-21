@@ -12,7 +12,7 @@ const ItemDetail = ({product}) => {
 
     const [count, setCount] = useState(1);
 
-    const {addToCart, clear} = useContext(CartContext);
+    const {addToCart, clear, removeItem} = useContext(CartContext);
 
     function onAdd(product){
       addToCart(product, count)
@@ -20,16 +20,19 @@ const ItemDetail = ({product}) => {
 
   return (
     <>
+            
             <img className='img-detalle'  src={product.image} alt={product.title}/>
 
             <div className='contenedor-detalle'>
+              <Link to={"/products"}>Volver</Link>
               <h3 className='titulo-detalle'>{product.title}</h3>
               <hr className='hr-detalle'/>
               <h3 className='descripcion-detalle'>{product.description}</h3>
               <h4 className='precio-detalle'>Precio: ${product.price}</h4> 
               <ItemCount setCount={setCount} count={count} stock={stock}/>
               <Link to={'/cart'} onClick={ () => onAdd(product) } className='boton-agregar'>Agregar al carrito</Link>
-              {/* <button onClick={clear}>Clear Carrito</button> */}
+              {/* <button onClick={clear}>Vaciar Carrito</button>
+              <button onClick={()=> removeItem(product.id)}>Eliminar producto</button> */}
             </div>
 
     </>

@@ -44,6 +44,10 @@ function App() {
               path="category/:categoryName"
               element={<ItemListContainer />}
             />
+            <Route
+              path="/cart"
+              element={<ItemListContainer />}
+            />
           </Routes>
           <Footer />
         </BrowserRouter>
