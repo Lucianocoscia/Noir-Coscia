@@ -3,6 +3,7 @@ import './Categories.css';
 import portada from '../../../images/portada.jpg';
 import portada1 from '../../../images/ropa4-byn.jpg';
 import portada2 from '../../../images/ropa3.jpg';
+import { Link } from 'react-router-dom';
 
 
 const Categories = () => {
@@ -18,17 +19,20 @@ const Categories = () => {
     </div>
     <div className='container'>
         <div className='grid_categorias'>
-            <div className='grid_categorias_hijo  grid_categorias_hijo-1'>
-                <h3 className='texto_img'>Abrigos</h3>
-            </div>
+            <Link className='grid_categorias_hijo  grid_categorias_hijo-1' to={'/category/Abrigos'}>
+                
+                    <h3 className='texto_img'>Abrigos</h3>
+                
+            </Link>
 
-            <div className='grid_categorias_hijo grid_categorias_hijo-2'>
+
+            <Link to={'/category/Pantalones'} className='grid_categorias_hijo grid_categorias_hijo-2'>
                 <h3 className='texto_img' >Pantalones</h3>
-            </div>
+            </Link>
 
-            <div className='grid_categorias_hijo grid_categorias_hijo-3'>
+            <Link to={'/category/Remeras'} className='grid_categorias_hijo grid_categorias_hijo-3'>
                 <h3 className='texto_img'>Remeras</h3>
-            </div>
+            </Link>
         </div>
         <div className='grid_sales'>
             <div className='grid_categorias_hijo grid_categorias_hijo-4'>

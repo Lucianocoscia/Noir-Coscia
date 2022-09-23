@@ -12,31 +12,53 @@ const ItemDetail = ({product}) => {
 
     const [count, setCount] = useState(1);
 
-    const {addToCart, clear, removeItem} = useContext(CartContext);
+    const {addToCart} = useContext(CartContext);
 
     function onAdd(product){
       addToCart(product, count)
     }
 
-  return (
-    <>
+    if(count>=10){
+      return (
+        <>
             
-            <img className='img-detalle'  src={product.image} alt={product.title}/>
+        <img className='img-detalle'  src={product.image} alt={product.title}/>
 
-            <div className='contenedor-detalle'>
-              <Link to={"/products"}>Volver</Link>
-              <h3 className='titulo-detalle'>{product.title}</h3>
-              <hr className='hr-detalle'/>
-              <h3 className='descripcion-detalle'>{product.description}</h3>
-              <h4 className='precio-detalle'>Precio: ${product.price}</h4> 
-              <ItemCount setCount={setCount} count={count} stock={stock}/>
-              <Link to={'/cart'} onClick={ () => onAdd(product) } className='boton-agregar'>Agregar al carrito</Link>
-              {/* <button onClick={clear}>Vaciar Carrito</button>
-              <button onClick={()=> removeItem(product.id)}>Eliminar producto</button> */}
-            </div>
+        <div className='contenedor-detalle'>
+          <Link to={"/products"}>Volver</Link>
+          <h3 className='titulo-detalle'>{product.title}</h3>
+          <hr className='hr-detalle'/>
+          <h3 className='descripcion-detalle'>{product.description}</h3>
+          <h4 className='precio-detalle'>Precio: ${product.price}</h4> 
+          <ItemCount setCount={setCount} count={count} stock={stock}/>
+          <Link onClick={ () => onAdd(product) } className='boton-agregar' to={'/cart'}>Terminar compra</Link>
 
-    </>
-  )
+        </div>
+
+        </>
+      )
+
+      }  else{
+            return(
+              <>
+                      
+                <img className='img-detalle'  src={product.image} alt={product.title}/>
+
+                <div className='contenedor-detalle'>
+                  <Link to={"/products"}>Volver</Link>
+                  <h3 className='titulo-detalle'>{product.title}</h3>
+                  <hr className='hr-detalle'/>
+                  <h3 className='descripcion-detalle'>{product.description}</h3>
+                  <h4 className='precio-detalle'>Precio: ${product.price}</h4> 
+                  <ItemCount setCount={setCount} count={count} stock={stock}/>
+                  <Link to={'/cart'} onClick={ () => onAdd(product) } className='boton-agregar'>Agregar al carrito</Link>
+
+                  {/* <button onClick={clear}>Vaciar Carrito</button>
+                  <button onClick={()=> removeItem(product.id)}>Eliminar producto</button> */}
+                </div>
+
+              </>
+            )};
 }
 
 export default ItemDetail

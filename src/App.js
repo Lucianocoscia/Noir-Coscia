@@ -9,6 +9,7 @@ import Login from "./pages/Login/Login";
 import Registro from "./pages/Registro/Registro";
 
 import CartProvider from "./context/CartProvider";
+import Cart from "./Components/CartView/Cart";
 
 function App() {
   return (
@@ -46,7 +47,7 @@ function App() {
             />
             <Route
               path="/cart"
-              element={<ItemListContainer />}
+              element={<Cart />}
             />
           </Routes>
           <Footer />

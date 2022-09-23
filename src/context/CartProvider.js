@@ -7,6 +7,7 @@ const CartProvider = ({children}) => {
     const [cart, setCart] = useState([]); // state local q es mi carrito
 
     console.log(cart);
+    const subTotal = () => { return cart.reduce((acum, valor) => (acum + (valor.quantity * valor.price)), 0) }
 
     // funcion q agrega productos en mi carrito
     const addToCart = (item, quantity) =>{ 
@@ -51,7 +52,7 @@ const CartProvider = ({children}) => {
 
   return (
     
-    <CartContext.Provider value={{ cart, addToCart, clear,  removeItem}}>
+    <CartContext.Provider value={{ cart, addToCart, clear,  removeItem, subTotal}}>
         {children}
     </CartContext.Provider>
   );

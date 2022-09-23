@@ -2,7 +2,7 @@ import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget'
 import {AiOutlineSearch} from 'react-icons/ai'
 import Oferta from './Oferta'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const NavBar = () => {
     return (
@@ -24,7 +24,7 @@ const NavBar = () => {
                     <div className='navbar_items'>
                         <NavLink to={'/registro'} className='link'>Crear Cuenta</NavLink>
                         <NavLink to={'/login'} className='link'>Iniciar Sesión</NavLink>
-                        <button className='button_Cart'><CartWidget/></button>
+                        <Link to={'/cart'} className='button_Cart'><CartWidget/></Link>
                     </div>
 
                 </nav>

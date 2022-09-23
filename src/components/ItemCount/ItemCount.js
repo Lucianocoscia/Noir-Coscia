@@ -25,7 +25,8 @@ const ItemCount = ({stock , setCount, count}) => {
 
     const onAdd = () =>{
       if(count >= stock){
-        alert("No contamos con mas stock de este producto")
+
+        alert("No contamos con mas stock de este producto");
         return;
       }
         setCount (count + 1)

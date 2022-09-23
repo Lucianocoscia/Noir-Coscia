@@ -21,10 +21,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+    transition: 1s;
 }
+
 .grid_categorias_hijo-1{
     background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)),url(../../../images/puffer3.png) ;
-
+    overflow: hidden;
+}
+.grid_categorias_hijo-1:hover, .grid_categorias_hijo-2:hover, .grid_categorias_hijo-3:hover{
+    transform: scale(1.04);
 }
 .grid_categorias_hijo-2{
     background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)),url(../../../images/pant3.jpg) ;
@@ -44,6 +50,7 @@
     text-transform: uppercase;
     font-weight: 700;
     color: #fff;
+    text-decoration: none;
 }
 .button_img{
     padding: 9px 12px;
