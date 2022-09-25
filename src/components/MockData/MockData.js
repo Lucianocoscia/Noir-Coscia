@@ -1,4 +1,4 @@
-import product1 from '../../images/buzo.jpg'
+/* import product1 from '../../images/buzo.jpg'
 import product2 from '../../images/pantalon-creme.jpg'
 import product3 from '../../images/producto1.jpg'
 import product4 from '../../images/pant-black.jpg'
@@ -292,4 +292,4 @@ const data = [
         image: product32
     },
 ]
-export default data 
+export default data  */
