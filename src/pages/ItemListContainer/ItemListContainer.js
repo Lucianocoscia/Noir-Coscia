@@ -14,6 +14,7 @@ import {
 const ItemListContainer = () => {
   const { categoryName } = useParams();
   console.log(categoryName);
+  const [cargando, setCargando] = useState(true);
 
   const [productList, setProductList] = useState([]);
 
@@ -45,7 +46,7 @@ const ItemListContainer = () => {
   useEffect(() => {
     setTimeout(() => {
       getProducts();
-    }, 0);
+    }, 1000);
     // getProducts();
   }, [categoryName]);
 
