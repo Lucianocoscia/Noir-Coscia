@@ -14,7 +14,7 @@ import {
 const ItemListContainer = () => {
   const { categoryName } = useParams();
   console.log(categoryName);
-  const [cargando, setCargando] = useState(true);
+  // const [cargando, setCargando] = useState(true);
 
   const [productList, setProductList] = useState([]);
 
@@ -46,13 +46,13 @@ const ItemListContainer = () => {
   useEffect(() => {
     setTimeout(() => {
       getProducts();
-    }, 1000);
+    }, 0);
     // getProducts();
   }, [categoryName]);
 
   return (
     <div>
-      <div className="container">
+      <div className="container" style={{minHeight:"100vh"}}>
         <ItemList lista={productList} />
       </div>
     </div>

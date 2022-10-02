@@ -1,8 +1,10 @@
+import Dropdown  from "./Dropdown";
 import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget";
 import { AiOutlineSearch } from "react-icons/ai";
 import Oferta from "./Oferta";
 import { Link, NavLink } from "react-router-dom";
+
 
 const NavBar = () => {
   return (
@@ -35,6 +37,7 @@ const NavBar = () => {
             </Link>
           </div>
         </nav>
+
         <div className="contenedor_links">
           <ul className="navbar_ul">
             <li>
@@ -42,62 +45,8 @@ const NavBar = () => {
                 Inicio
               </NavLink>
             </li>
-            {/*                            <li>
-                                <NavLink className={'ul_enlace'} to={'/products'}>
-                                    Productos         
-                                </NavLink>
-                            </li> */}
-            <li className=" dropdown">
-              {/*                                 <a className=" dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Productos
-                                </a> */}
-              <NavLink
-                className={"ul_enlace dropdown-toggle"}
-                role="button"
-                data-bs-toggle="dropdown"
-                to={"/products"}
-              >
-                Productos
-              </NavLink>
-              <ul className="dropdown-menu">
-                <li>
-                  <NavLink
-                    className="dropdown-item"
-                    data-bs-auto-close="outside"
-                    to={"/products"}
-                  >
-                    Ver Todos
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    className="dropdown-item"
-                    data-bs-auto-close="true"
-                    to={"/category/Abrigos"}
-                  >
-                    Abrigos
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    className="dropdown-item"
-                    data-bs-auto-close="true"
-                    to={"/category/Pantalones"}
-                  >
-                    Pantalones
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    className="dropdown-item"
-                    data-bs-auto-close="true"
-                    to={"/category/Remeras"}
-                  >
-                    Remeras
-                  </NavLink>
-                </li>
-              </ul>
-            </li>
+            <li ><Dropdown  /></li>
+
             <li>
               <NavLink className={"ul_enlace"} to={"/contact"}>
                 Contacto

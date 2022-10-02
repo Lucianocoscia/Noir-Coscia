@@ -1,14 +1,9 @@
 import React from "react";
-// import { useState } from 'react';
 import { GrFormAdd } from "react-icons/gr";
 import { GrFormSubtract } from "react-icons/gr";
 import "./ItemCount.css";
 
 const ItemCount = ({ stock, setCount, count }) => {
-  // const  [items, setItems] = useState(0);
-
-  // const suma = () => items < stock ? setItems(items + 1) : alert('Se alcanzo el limite de stock');
-  // const resta = () => items > 0 ? setItems(items - 1) : alert('No se pueden meter valores negativos');
 
   const onRemove = () => {
     if (count === 0) {
@@ -41,3 +36,8 @@ const ItemCount = ({ stock, setCount, count }) => {
 };
 
 export default ItemCount;
+
+  // const  [items, setItems] = useState(0);
+
+  // const suma = () => items < stock ? setItems(items + 1) : alert('Se alcanzo el limite de stock');
+  // const resta = () => items > 0 ? setItems(items - 1) : alert('No se pueden meter valores negativos');

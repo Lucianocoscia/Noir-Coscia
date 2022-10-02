@@ -9,8 +9,8 @@ const Cart = () => {
   console.log("cart", cart);
 
   return (
-    <div className="container">
-      <h1 className="text-left">Cart</h1>
+    <div className=" mt-4 container" style={{minHeight:"90vh"}}>
+      {/* <h5 className="text-left">Cart</h5> */}
       {cart.length === 0 ? (
         <>
           <h2>No hay productos en tu carrito</h2>
@@ -19,7 +19,7 @@ const Cart = () => {
       ) : (
         <>
           <div className="container">
-            <Table striped bordered hover>
+            <Table className="mt-4" striped bordered hover>
               <thead>
                 <tr className="text-center">
                   <th>#ID</th>

@@ -111,12 +111,21 @@ ul{
     list-style-type: none;
     font-size: 1rem;
 }
+.style-dropdown{
+    background-color: transparent;
+    border: none;
+}
 .ul_enlace{
     transition: 1s;
 }
-.ul_enlace:hover{
-    color: #2D3D42;
-    border-top: 1px solid #2D3D42;
+.btn{
+    padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: 1s;
+}
+.btn:target{
+    border: none;
 }
 .overline-nav{
     border-top: 1 px solid #2D3D42 ;

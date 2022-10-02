@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { CartContext } from "./CartContext";
 
-// export const CartContext = createContext();
-
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]); // state local q es mi carrito
 
@@ -36,13 +34,7 @@ const CartProvider = ({ children }) => {
 
   //Remover un item del cart usando su id2
   const removeItem = (productId) => {
-    let nuevoArreglo = [];
-    cart.forEach((product) => {
-      if (product.id !== productId) {
-        nuevoArreglo.push(product);
-      }
-    });
-    setCart(nuevoArreglo);
+    setCart(cart.filter((product)=> product.id !== productId));
   };
 
   // Remover todos los items
@@ -72,3 +64,11 @@ export default CartProvider;
 /*     useEffect(()=>{ // controlo el montado del Console.log
       console.log(cart);
     }, [cart]); */ // Q se ejecute cada vez q se actualiza el cart. Se ejecuta por default y no se actualiza si no le paso dependecia
+
+    /*     let nuevoArreglo = [];
+    cart.forEach((product) => {
+      if (product.id !== productId) {
+        nuevoArreglo.push(product);
+      }
+    }); */
+    // setCart(nuevoArreglo);

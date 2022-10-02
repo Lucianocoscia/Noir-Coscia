@@ -30,11 +30,7 @@ import product29 from '../../images/abrigo02.jpg'
 import product30 from '../../images/abrigo03.png'
 import product31 from '../../images/abrigo04.jpg'
 import product32 from '../../images/abrigo05.jpg'
-
-
-
 const data = [
-
     {
         id: '1',
         title: 'Producto1',

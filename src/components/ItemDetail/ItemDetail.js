@@ -27,7 +27,7 @@ const ItemDetail = ({ product }) => {
           <h3 className="titulo-detalle">{product.title}</h3>
           <hr className="hr-detalle" />
           <h3 className="descripcion-detalle">{product.description}</h3>
-          <h4 className="precio-detalle">Precio: ${product.price}</h4>
+          <h5 className="precio-detalle">Precio: ${product.price}</h5>
           <ItemCount setCount={setCount} count={count} stock={product.stock} />
           <Link
             onClick={() => onAdd(product)}
@@ -49,7 +49,7 @@ const ItemDetail = ({ product }) => {
           <h3 className="titulo-detalle">{product.title}</h3>
           <hr className="hr-detalle" />
           <h3 className="descripcion-detalle">{product.description}</h3>
-          <h4 className="precio-detalle">Precio: ${product.price}</h4>
+          <h5 className="precio-detalle">Precio: ${product.price}</h5>
           <ItemCount setCount={setCount} count={count} stock={product.stock} />
           <Link
             to={"/cart"}
