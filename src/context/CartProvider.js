@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { CartContext } from "./CartContext";
+import swal from 'sweetalert';
+import Toastify from 'toastify-js';
+import "toastify-js/src/toastify.css";
 
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]); // state local q es mi carrito
-
   console.log(cart);
+
   const subTotal = () => {
     return cart.reduce((acum, valor) => acum + valor.quantity * valor.price, 0);
   };
@@ -19,8 +22,9 @@ const CartProvider = ({ children }) => {
         (elemento) => elemento.id === item.id
       );
       elementoDuplicado.quantity = elementoDuplicado.quantity + quantity;
-
-      alert("Ya esta en el carrito");
+      Toastify({
+        text: "El producto elegido ya se encuentra en el carrito",
+      }).showToast();
       console.log(cart);
     } else {
       setCart([...cart, { ...item, quantity }]);
@@ -35,6 +39,7 @@ const CartProvider = ({ children }) => {
   //Remover un item del cart usando su id2
   const removeItem = (productId) => {
     setCart(cart.filter((product)=> product.id !== productId));
+    swal("Producto eliminado","", "success");
   };
 
   // Remover todos los items

@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import Swal from 'sweetalert2'
 
 const ItemDetail = ({ product }) => {
   // console.log(product);
@@ -15,6 +16,22 @@ const ItemDetail = ({ product }) => {
 
   function onAdd(product) {
     addToCart(product, count);
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+    
+    Toast.fire({
+      icon: 'success',
+      title: `${product.title} agregado al carrito`
+    })
   }
 
   if (count >= 10) {
@@ -23,7 +40,6 @@ const ItemDetail = ({ product }) => {
         <img className="img-detalle" src={product.image} alt={product.title} />
 
         <div className="contenedor-detalle">
-          <Link to={"/products"}>Volver</Link>
           <h3 className="titulo-detalle">{product.title}</h3>
           <hr className="hr-detalle" />
           <h3 className="descripcion-detalle">{product.description}</h3>
@@ -45,7 +61,6 @@ const ItemDetail = ({ product }) => {
         <img className="img-detalle" src={product.image} alt={product.title} />
 
         <div className="contenedor-detalle">
-          <Link to={"/products"}>Volver</Link>
           <h3 className="titulo-detalle">{product.title}</h3>
           <hr className="hr-detalle" />
           <h3 className="descripcion-detalle">{product.description}</h3>

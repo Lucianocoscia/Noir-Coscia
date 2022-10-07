@@ -12,6 +12,9 @@ import {
   doc,
 } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+import swal from "sweetalert";
+import "./Cart.css";
 
 const Cart = () => {
   const { cart, removeItem, subTotal, clear } = useContext(CartContext);
@@ -42,29 +45,52 @@ const Cart = () => {
 
   // Creo la orden y primero actuliza el state de la orden, le dejamos el buyer tal cual como esta y actualizamos el item, total y date.
   const createOrder = () => {
-    const query = collection(
-      db,
-      "orden"
-    ); /* Busco en mi database la coleccion orden */
+    const valorName = document.getElementById("valorName");
+    const valorPhone = document.getElementById("valorPhone");
+    const valorEmail = document.getElementById("valorEmail");
 
-    // agrego la nueva orden a la collecion orden de firebase
-    addDoc(query, order)
-      .then(({ id }) => {
-        console.log(id);
-        updateStockProduct();
-        alert("Felicidades por tu compra");
-        alert(`Su id de compra es ${id}`);
-      })
-      .catch(() =>
-        alert("Tu compra no pudo ser completada, intentalo mas tarde.")
-      );
+    if (
+      valorName.value === "" ||
+      valorPhone.value === "" ||
+      valorEmail.value === ""
+    ) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Complete los campos del formulario para realizar la orden de compra",
+      });
+    } else {
+      const query = collection(
+        db,
+        "orden"
+      ); /* Busco en mi database la coleccion orden */
+
+      // agrego la nueva orden a la collecion orden de firebase
+      addDoc(query, order)
+        .then(({ id }) => {
+          console.log(id);
+          updateStockProduct();
+          swal(
+            "Felicidades por tu compra",
+            `Su id de compra es ${id}`,
+            "success"
+          );
+
+        })
+        .catch(() =>
+          swal(
+            "Error al realizar la compra.",
+            "Tu compra no pudo ser completada, intentalo mas tarde.",
+            "error"
+          )
+        );
+    }
   };
 
   // actualizo la orden segun el stock y cantidades compradas
   const updateStockProduct = () => {
-
     cart.forEach((product) => {
-      const queryUpdate = doc(db, 'items', product.id);
+      const queryUpdate = doc(db, "items", product.id);
 
       updateDoc(queryUpdate, {
         category: product.category,
@@ -73,8 +99,9 @@ const Cart = () => {
         price: product.price,
         title: product.title,
         stock: product.stock - product.quantity,
-      }).then(() => {
-        // siempre selecciona el ultimo del carrito y su id y lo iguala al id del producto 
+      })
+        .then(() => {
+          // siempre selecciona el ultimo del carrito y su id y lo iguala al id del producto
           if (cart[cart.length - 1].id === product.id) {
             clear();
             navigate("/");
@@ -99,12 +126,22 @@ const Cart = () => {
     });
   };
 
+  const formOrden = () => {
+    let modalContenedorForm = document.getElementById("ContenedorForm");
+    modalContenedorForm.classList.toggle("contenedor-form-active");
+  };
+
+  const cerrarForm = () =>{
+    let modalContenedorForm = document.getElementById("ContenedorForm");
+    modalContenedorForm.classList.remove("contenedor-form-active")
+  }
+
   return (
     <div className=" mt-4 container" style={{ minHeight: "90vh" }}>
       {cart.length === 0 ? (
         <>
           <h2>No hay productos en tu carrito</h2>
-          <Link to={"/products"}>Volver A Comprar</Link>
+          <Link className="link-seguir-comprando" to={"/products"}>Volver A Comprar</Link>
         </>
       ) : (
         <>
@@ -145,12 +182,14 @@ const Cart = () => {
                     </td>
                     <td></td>
                     <td>
-                      <button
-                        className="btn btn-danger"
-                        onClick={() => removeItem(item.id)}
-                      >
-                        Eliminar producto
-                      </button>
+                      <div className="contenedor-boton-eliminar">
+                        <button
+                          className="boton-eliminar "
+                          onClick={() => removeItem(item.id)}
+                        >
+                          Eliminar
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 </tbody>
@@ -168,40 +207,72 @@ const Cart = () => {
                 </tr>
               </thead>
             </Table>
-            <Link to={"/products"}>Volver A Comprar</Link>
-            <button onClick={createOrder}>Crear Orden</button>
+            <div className="contenedor-botones">
+              <Link className="link-seguir-comprando" to={"/products"}>
+                Seguir comprando
+              </Link>
+              <button className="boton-eliminar" onClick={clear}>Vaciar Carrito</button>
+            </div>
 
-            {/* <button onClick={updateItems} >Editar Orden</button> */}
+            <div className="contenedor-boton-orden">
+              <button
+                id="botonCrearOrden"
+                className="boton-crear-orden"
+                onClick={formOrden}
+              >
+                Terminar Compra
+              </button>
+            </div>
           </div>
 
-          <div className="container text-center">
-            <div>
-              <label>Nombre</label>
-              <input
-                name="name"
-                type={"text"}
-                value={order.buyer.name}
-                onChange={handleInputChange}
-              />
-            </div>
-            <div>
-              <label>Telefono</label>
-              <input
-                name="phone"
-                type={"number"}
-                value={order.buyer.phone}
-                onChange={handleInputChange}
-              />
-            </div>
-            <div>
-              <label>Email</label>
-              <input
-                name="email"
-                type={"email"}
-                value={order.buyer.email}
-                onChange={handleInputChange}
-              />
-            </div>
+          <div
+            id="ContenedorForm"
+            className="container contenedor-form text-center mt-4 mb-5"
+          >
+            <span onClick={cerrarForm} className="cerrar-modal">X</span>
+            <form>
+              <div className="form-group">
+                <label for="exampleInputEmail1">Nombre</label>
+                <input
+                  type={"text"}
+                  className="form-control"
+                  id="valorName"
+                  name="name"
+                />
+              </div>
+              <div className="form-group">
+                <label for="exampleInputPassword1">Telefono</label>
+                <input
+                  type={"number"}
+                  name="phone"
+                  id="valorPhone"
+                  value={order.buyer.phone}
+                  onChange={handleInputChange}
+                  className="form-control"
+                />
+              </div>
+              <div className="form-group">
+                <label for="exampleInputPassword1">Email</label>
+                <input
+                  type={"email"}
+                  id="valorEmail"
+                  name="email"
+                  value={order.buyer.email}
+                  onChange={handleInputChange}
+                  className="form-control"
+                />
+              </div>
+
+            </form>
+            <div className="contenedor-boton-orden mt-2">
+                <button
+                  id="botonCrearOrden"
+                  className="boton-crear-orden"
+                  onClick={createOrder}
+                >
+                  Crear Orden
+                </button>
+              </div>
           </div>
         </>
       )}
@@ -210,4 +281,3 @@ const Cart = () => {
 };
 
 export default Cart;
-

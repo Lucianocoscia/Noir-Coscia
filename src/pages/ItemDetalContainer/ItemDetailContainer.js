@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ItemDetail from "../../Components/ItemDetail/ItemDetail";
 import "./ItemDetailContainer.css";
-
+import { Link } from "react-router-dom";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
@@ -32,12 +32,12 @@ const ItemDetailContainer = () => {
     setTimeout(() => {
       getProduct();
     }, 0);
-    // getProduct();
   }, [id]);
 
   return (
     <>
       <div className="container">
+        <Link className="link-volver" to={"/products"}>Volver a Productos</Link>
         <div className="contenedor_detalle">
           <ItemDetail product={productDetail} />
         </div>
