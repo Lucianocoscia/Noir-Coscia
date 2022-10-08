@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Noir-Coscia/static/css/main.0274b142.css",
-    "main.js": "/Noir-Coscia/static/js/main.8d622d06.js",
+    "main.js": "/Noir-Coscia/static/js/main.5fe2c21c.js",
     "static/js/787.20633c6f.chunk.js": "/Noir-Coscia/static/js/787.20633c6f.chunk.js",
     "static/media/portada.jpg": "/Noir-Coscia/static/media/portada.80b3cce8c1dab9fc446c.jpg",
     "static/media/ropa3.jpg": "/Noir-Coscia/static/media/ropa3.b9de5a96bea57558605e.jpg",
@@ -13,11 +13,11 @@
     "static/media/remera1.jpg": "/Noir-Coscia/static/media/remera1.cad3e78f62d8b89b4e4e.jpg",
     "index.html": "/Noir-Coscia/index.html",
     "main.0274b142.css.map": "/Noir-Coscia/static/css/main.0274b142.css.map",
-    "main.8d622d06.js.map": "/Noir-Coscia/static/js/main.8d622d06.js.map",
+    "main.5fe2c21c.js.map": "/Noir-Coscia/static/js/main.5fe2c21c.js.map",
     "787.20633c6f.chunk.js.map": "/Noir-Coscia/static/js/787.20633c6f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0274b142.css",
-    "static/js/main.8d622d06.js"
+    "static/js/main.5fe2c21c.js"
   ]
 }
