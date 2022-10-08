@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Noir-Coscia/static/css/main.0274b142.css",
+    "main.js": "/Noir-Coscia/static/js/main.8d622d06.js",
+    "static/js/787.20633c6f.chunk.js": "/Noir-Coscia/static/js/787.20633c6f.chunk.js",
+    "static/media/portada.jpg": "/Noir-Coscia/static/media/portada.80b3cce8c1dab9fc446c.jpg",
+    "static/media/ropa3.jpg": "/Noir-Coscia/static/media/ropa3.b9de5a96bea57558605e.jpg",
+    "static/media/tienda-ropa.jpg": "/Noir-Coscia/static/media/tienda-ropa.c65a1dad927b6e7bc186.jpg",
+    "static/media/portada2.jpg": "/Noir-Coscia/static/media/portada2.2d43d3de8b0a6ed54a62.jpg",
+    "static/media/ropa4-byn.jpg": "/Noir-Coscia/static/media/ropa4-byn.622b867c7ac846fe1acf.jpg",
+    "static/media/puffer3.png": "/Noir-Coscia/static/media/puffer3.254b12b45db9c3d90d6b.png",
+    "static/media/pant3.jpg": "/Noir-Coscia/static/media/pant3.2cec9e86e404ea25de87.jpg",
+    "static/media/remera1.jpg": "/Noir-Coscia/static/media/remera1.cad3e78f62d8b89b4e4e.jpg",
+    "index.html": "/Noir-Coscia/index.html",
+    "main.0274b142.css.map": "/Noir-Coscia/static/css/main.0274b142.css.map",
+    "main.8d622d06.js.map": "/Noir-Coscia/static/js/main.8d622d06.js.map",
+    "787.20633c6f.chunk.js.map": "/Noir-Coscia/static/js/787.20633c6f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0274b142.css",
+    "static/js/main.8d622d06.js"
+  ]
+}
