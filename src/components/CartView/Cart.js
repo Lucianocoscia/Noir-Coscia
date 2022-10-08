@@ -237,6 +237,8 @@ const Cart = () => {
                   type={"text"}
                   className="form-control"
                   id="valorName"
+                  value={order.buyer.name}
+                  onChange={handleInputChange}
                   name="name"
                 />
               </div>
