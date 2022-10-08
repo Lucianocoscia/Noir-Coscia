@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { CartContext } from "./CartContext";
 import swal from 'sweetalert';
-import Toastify from 'toastify-js';
-import "toastify-js/src/toastify.css";
+import Swal from 'sweetalert2'
 
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]); // state local q es mi carrito
@@ -22,9 +21,25 @@ const CartProvider = ({ children }) => {
         (elemento) => elemento.id === item.id
       );
       elementoDuplicado.quantity = elementoDuplicado.quantity + quantity;
-      Toastify({
-        text: "El producto elegido ya se encuentra en el carrito",
-      }).showToast();
+
+
+
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+      
+      Toast.fire({
+        icon: 'success',
+        title: "El producto elegido ya se encuentra en el carrito"
+      })
       console.log(cart);
     } else {
       setCart([...cart, { ...item, quantity }]);
