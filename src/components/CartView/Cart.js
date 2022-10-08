@@ -232,7 +232,7 @@ const Cart = () => {
             <span onClick={cerrarForm} className="cerrar-modal">X</span>
             <form>
               <div className="form-group">
-                <label for="exampleInputEmail1">Nombre</label>
+                <label>Nombre</label>
                 <input
                   type={"text"}
                   className="form-control"
@@ -241,7 +241,7 @@ const Cart = () => {
                 />
               </div>
               <div className="form-group">
-                <label for="exampleInputPassword1">Telefono</label>
+                <label >Telefono</label>
                 <input
                   type={"number"}
                   name="phone"
@@ -252,7 +252,7 @@ const Cart = () => {
                 />
               </div>
               <div className="form-group">
-                <label for="exampleInputPassword1">Email</label>
+                <label>Email</label>
                 <input
                   type={"email"}
                   id="valorEmail"

@@ -4,6 +4,7 @@ import "../Item/Item.css";
 
 const ItemList = ({ lista }) => {
   // console.log(lista);
+
   return (
     <div className="grid_productos">
       {lista.map((product) => (

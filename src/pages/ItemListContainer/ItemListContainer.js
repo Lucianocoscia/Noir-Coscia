@@ -32,19 +32,36 @@ const ItemListContainer = () => {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      getProducts();
-    }, 0);
-    // getProducts();
+    getProducts();
   }, [categoryName]);
 
-  return (
-    <div>
+  const [loader, setLoader] = useState(true); 
+  useEffect (() => {
+    setTimeout(() => {
+      setLoader(false);
+    }, 1000)
+  });
+
+  if(loader){
+    return(
+      <>
+      <div className=" contenedor-spinner-1">
+        <div className="  spinner-border" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    
+    </> 
+    )
+  } else{
+    return(
+      <div>
       <div className="container" style={{minHeight:"100vh"}}>
         <ItemList lista={productList} />
       </div>
     </div>
-  );
+    )
+  }
 };
 
 export default ItemListContainer;

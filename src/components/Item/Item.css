@@ -2,7 +2,6 @@
     height: 65vh;
     object-fit: cover;
     margin-bottom: 1rem;
-    /* width: 100%; */
     transition: .4s ease-in-out;
     overflow: hidden;
 }
@@ -13,4 +12,11 @@
 .card_price{
     text-align: center;
     padding: 0.5rem;
+}
+.contenedor-spinner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
 }
