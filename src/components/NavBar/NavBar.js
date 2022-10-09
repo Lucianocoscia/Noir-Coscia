@@ -1,5 +1,5 @@
 import Dropdown  from "./Dropdown";
-import "./navBar.css";
+import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget";
 import { AiOutlineSearch } from "react-icons/ai";
 import Oferta from "./Oferta";
