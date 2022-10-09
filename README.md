@@ -11,7 +11,8 @@ Este proyecto fue realizado para el curso de React Js de Coderhouse
  | Luciano Coscia: https://www.linkedin.com/in/luciano-coscia-desarrolladorfullstack/ , https://github.com/Lucianocoscia?tab=repositories
  
 ### GIF demostración del sitio:
-https://user-images.githubusercontent.com/104936340/194779088-732f240f-35e7-498f-be47-50060e0d7585.mp4
+![alt](https://user-images.githubusercontent.com/104936340/194779088-732f240f-35e7-498f-be47-50060e0d7585.mp4)
+
 ----
 ### Librerias utilizadas en el proyecto:
 | Library | Used |
