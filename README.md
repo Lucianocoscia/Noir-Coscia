@@ -1,3 +1,33 @@
+# Tienda de ropa Noir
+---
+## ECOMMERCE Project in ReactJs
+---
+Este proyecto fue realizado para el curso de React Js de Coderhouse
+
+![alt](./public/images/coder-house.png)
+
+### Author 
+---
+ | Luciano Coscia: https://www.linkedin.com/in/luciano-coscia-desarrolladorfullstack/ , https://github.com/Lucianocoscia?tab=repositories
+ 
+### GIF demostración del sitio:
+[![Watch the video](./public/images/Gift-Noir-Entrega.mp4)
+----
+### Librerias utilizadas en el proyecto:
+| Library | Used |
+| ------ | ------ |
+| ReactJS | JavaScript Framework |
+| Create React App | Create React Project |
+| Toastify-Js | Alerts framework |
+| SweetAlert | Alerts framework |
+| SweetAlert2| Alerts framework |
+| Bootstrap | Css  |
+| React-Bootstrap | Css  |
+| React-Icons | Css Icons  |
+| React Router |Router |
+| Firebase | Authentication & DataBase |
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
