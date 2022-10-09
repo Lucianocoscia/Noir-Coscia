@@ -1,47 +1,32 @@
 import React from "react";
+import './Registro.css';
 
 const Registro = () => {
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="First name"
-            aria-label="First name"
-          />
-          <div className="form-floating mb-3">
-            <input
-              type="email"
-              className="form-control"
-              id="floatingInput"
-              placeholder="name@example.com"
-            />
-            <label for="floatingInput">Email address</label>
-          </div>
-        </div>
-        <div className="col">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Last name"
-            aria-label="Last name"
-          />
+    <div className="container contenedor-registro">
+        <p className="text-center titulo-registro">Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!</p>
+        <div className="contenedor-form-registro">
+          <label>Nombre</label>
+          <input type={'text'} className='form-control'/>
 
-          <div className="form-floating">
-            <input
-              type="password"
-              className="form-control"
-              id="floatingPassword"
-              placeholder="Password"
-            />
-            <label for="floatingPassword">Password</label>
+          <label>Email</label>
+          <input type={'text'} className='form-control'/>
+
+          <label>Teléfono</label>
+          <input type={'text'} className='form-control'/>
+
+          <label>Contraseña</label>
+          <input type={'text'} className='form-control'/>
+
+          <div className="contenedor-boton-login mt-3">
+            <button className=" text-center boton-login">Crear Cuenta</button>
+            <p> ¿Ya tenés una cuenta? <a className="enlace-registro" href="/login">Iniciar Sesión</a></p>
           </div>
         </div>
-        <button className=" text-center boton-login">Iniciar Sesión</button>s
-      </div>
+
+
     </div>
+
   );
 };
 

@@ -213,7 +213,7 @@ const Cart = () => {
               </Link>
               <button className="boton-eliminar" onClick={clear}>Vaciar Carrito</button>
             </div>
-
+ 
             <div className="contenedor-boton-orden">
               <button
                 id="botonCrearOrden"
@@ -230,9 +230,10 @@ const Cart = () => {
             className="container contenedor-form text-center mt-4 mb-5"
           >
             <span onClick={cerrarForm} className="cerrar-modal">X</span>
+            <h4 className="mb-4">Ingrese sus datos para poder realizar su compra</h4>
             <form>
               <div className="form-group">
-                <label>Nombre</label>
+                <label className="p-2">Nombre:</label>
                 <input
                   type={"text"}
                   className="form-control"
@@ -243,8 +244,9 @@ const Cart = () => {
                 />
               </div>
               <div className="form-group">
-                <label >Telefono</label>
+                <label className="p-2">Telefono:</label>
                 <input
+                min={0}
                   type={"number"}
                   name="phone"
                   id="valorPhone"
@@ -254,7 +256,7 @@ const Cart = () => {
                 />
               </div>
               <div className="form-group">
-                <label>Email</label>
+                <label className="p-2">Email:</label>
                 <input
                   type={"email"}
                   id="valorEmail"
@@ -266,7 +268,7 @@ const Cart = () => {
               </div>
 
             </form>
-            <div className="contenedor-boton-orden mt-2">
+            <div className="contenedor-boton-orden mt-4">
                 <button
                   id="botonCrearOrden"
                   className="boton-crear-orden"

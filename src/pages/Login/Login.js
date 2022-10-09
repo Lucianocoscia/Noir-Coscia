@@ -4,30 +4,24 @@ import "./Login.css";
 const Login = () => {
   return (
     <>
-      <div className="flex-login">
-        <div className="contenedor-login ">
-          <h2 className="titulo-login">Iniciar Sesión</h2>
-          <div className="form-floating mb-3">
-            <input
-              type="email"
-              className="form-control"
-              id="floatingInput"
-              placeholder="name@example.com"
-            />
-            <label for="floatingInput">Email address</label>
-          </div>
-          <div className="form-floating">
-            <input
-              type="password"
-              className="form-control"
-              id="floatingPassword"
-              placeholder="Password"
-            />
-            <label for="floatingPassword">Password</label>
+    <div className="contenedor-login container">
+        <div className=" contenedor-form-login">
+          <label>Email</label>
+          <input className="form-control" type={"text"}/>
+
+          <label>Contraseña</label>
+          <input type={'text'} className='form-control' />
+          <p className="enlace-forgot"> ¿Olvidaste tu contrañesa?</p>
+          <div className="contenedor-boton-login">
             <button className="boton-login">Iniciar Sesión</button>
+            <p> ¿No tenés una cuenta? <a className="enlace-registro" href="/registro">Crear cuenta</a></p>
           </div>
+
+
         </div>
-      </div>
+    </div>
+
+
     </>
   );
 };

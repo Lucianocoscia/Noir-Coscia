@@ -9,13 +9,18 @@ function BasicExample() {
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
-        <Dropdown.Item className="ul_enlace"><NavLink  to={"/products"}>Ver todos</NavLink></Dropdown.Item>
-        <Dropdown.Item><NavLink to={"/category/Abrigos"}>Abrigos</NavLink></Dropdown.Item>
-        <Dropdown.Item><NavLink  to={"/category/Pantalones"}>Pantalones</NavLink></Dropdown.Item>
-        <Dropdown.Item><NavLink  to={"/category/Remeras"}>Remeras</NavLink></Dropdown.Item>
+        <Dropdown.Item href="/products" className="ul_enlace">Ver todos</Dropdown.Item>
+        <Dropdown.Item href="/category/Abrigos">Abrigos</Dropdown.Item>
+        <Dropdown.Item href="/category/Pantalones" >Pantalones</Dropdown.Item>
+        <Dropdown.Item href="/category/Remeras">Remeras</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );
 }
 
 export default BasicExample;
+
+// <NavLink  to={"/products"}>Ver todos</NavLink>
+// <NavLink to={"/category/Abrigos"}>Abrigos</NavLink>
+// <NavLink  to={"/category/Pantalones"}>Pantalones</NavLink>
+// <NavLink  to={"/category/Remeras"}>Remeras</NavLink>

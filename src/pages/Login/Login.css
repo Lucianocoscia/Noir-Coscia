@@ -1,26 +1,68 @@
-.boton-login{
-    border-radius: 10px;
-    border: none;
-    background-color: #2D3D42;
-    padding: 8px 16px;
-    width: 100%;
-    font-size: 20px;
-    color: #fff;
-    margin-top: 2rem;
-}
 .contenedor-login{
-    height: 65vh;
-    width: 400px;
+    min-height: 63.3vh;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor-form-login{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 600px;
+    margin-top: 3rem;
+
 }
-.titulo-login{
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 30px;
+.contenedor-form-login label{
+    padding-bottom:0.5rem ;
 }
-.flex-login{
+.contenedor-form-login input{
+    margin-bottom: 1rem;
+}
+.enlace-forgot{
+    cursor: pointer;
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+.enlace-forgot:hover{
+    text-decoration: underline;
+}
+.contenedor-boton-login{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.boton-login{
+    padding: 7px;
+    background-color: black;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 1rem;
+    transition: .4s ease-in-out;
+}
+.boton-login:hover{
+    background-color: rgba(0, 0, 0, 0.711);
+/* opacity: 0.6; */
+}
+.contenedor-boton-login p a{
+    font-weight: bold;
+    cursor: pointer;
+    transition: .4s ease-in-out ;
+}
+.contenedor-boton-login p a:hover{
+    opacity: 0.6;
+}
+.enlace-registro{
+    color: black;
+    text-decoration: none;
+}
+.enlace-registro:hover{
+    color: black;
+    opacity: 0.6;
 }
